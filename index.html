@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <style>
+        /* Базовые стили */
+.heart {
+  position: relative;
+  left:120px;
+  top: 300px;
+  width: 100px;
+  height: 175px;
+  background-color: rgb(0, 0, 0);
+  box-shadow: -1px 0px 2px #444;  
+  -webkit-border-radius: 50px 50px 0 0;
+  -moz-border-radius: 50px 50px 0 0;
+  border-radius: 50px 50px 0 0;
+/* Определяем угол наклона */
+  -webkit-transform: rotate(315deg);
+  -moz-transform: rotate(315deg);
+  -ms-transform: rotate(315deg);
+  -o-transform: rotate(315deg);
+  transform: rotate(315deg);
+}
+/* Формируем правую часть */
+.heart:before {
+  position: absolute;
+  width: 175px;
+  height: 100px;
+  left: 0;
+  bottom: 0;
+  content: "";
+  background-color: rgb(255, 0, 0);
+  box-shadow: 0px 3px 3px #444444; 
+  -webkit-border-radius: 50px 50px 0 0;
+  -moz-border-radius: 50px 50px 0 0;
+  border-radius: 0 50px 50px 0;
+}
+/* Убираем тень при наведении */
+.heart:hover:before, .heart:hover{
+    box-shadow:none;
+}
+#ioio {
+  position: absolute;
+  top: 300px;
+    width: 400px;
+    display: none;
+}
+#d {
+  position: absolute;
+  left: 80px;
+  top: 130px;
+  font-size: 30px;
+
+}
+
+#vb {
+  position: absolute;
+  left: -20px;
+  top:  0px;
+  width: 438px;
+  height: 1000px;
+  background-color: rgb(0, 0, 0);
+  animation: heart 2s linear;
+}
+@keyframes heart {
+  0% {
+    opacity: 0.9;
+  }
+  20% {
+    opacity: 0.6;
+  }
+  40% {
+    opacity: 0.4;
+  } 
+  60% {
+    opacity: 0.2;
+  }
+    100% {
+    opacity: 0.1;
+  }
+}
+  
+
+    </style>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>&&&</title>
+<script src="script.js"></script>
+</head>
+<body>
+  <div id="vb"></div>
+    <video  controls id="ioio">
+        <source src="IMG_4487.MOV">
+        </video>
+    <div onclick="ioi()" class="heart" ></div>
+    <p id="d"><b>Рискнеш сможеш нажать ?</p>
+  
+</body>
+</html>
